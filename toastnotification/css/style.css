@@ -1,0 +1,65 @@
+*{
+     box-sizing: border-box;
+}
+
+body{
+     font-family: sans-serif;
+     background-color: rebeccapurple;
+     height: 100vh;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+
+     margin: 0;
+     overflow: hidden;
+}
+
+.btn{
+     font-family: inherit;
+     text-transform: capitalize;
+     font-weight: bold;
+     background-color: #fff;
+     color: rebeccapurple;
+     border-radius: 5px;
+     border: none;
+     cursor: pointer;
+
+     padding: 1rem;
+}
+
+.btn:active{
+     transform: scale(0.98);
+}
+
+#toasts{
+     position: fixed;
+     bottom: 10px;
+     right: 10px;
+}
+
+.toast{
+     font-family: inherit;
+     text-transform: capitalize;
+     background-color: #fff;
+     /* color: rebeccapurple; */
+     border-radius: 5px;
+     border: none;
+     cursor: pointer;
+
+     padding: 1rem;
+     margin: 0.5rem;
+}
+
+.toast.info{
+     color: rebeccapurple;
+}
+
+.toast.success{
+     color: green;
+}
+
+.toast.danger{
+     color: tomato;
+}
