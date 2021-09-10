@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+:root{
+     --primary-color: #99b455;
+     --secondary-color: #79d8e2;
+     --third-color: #ff9114;
+     --fourth-color: #ff684a;
+     --text-color: #fdfdff;
+}
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+body{
+     font-family: 'Noto Sans JP', sans-serif;
+     background-color: #ffffff;
+     min-height: 100vh;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+
+     margin: 0;
+     overflow: hidden;
+}
+
+.decision-section{
+     transition: all 0.5s ease;
+     transition-delay: 0.6s;
+}
+
+h1{
+     text-transform: uppercase;
+     font-weight: bold;
+     letter-spacing: 2px;
+
+     position: absolute;
+     top: 0;
+     left: 50%;
+
+     transform: translate(-50%);
+}
+
+.choosebtn{
+     width: 300px;
+     height: 50px;
+     text-align: center;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     position: absolute;
+     top: 10%;
+     left: 50%;
+
+     transform: translate(-50%);
+}
+
+.month{
+     width: 50%;
+     height: 50px;
+     text-transform: capitalize;
+     background: transparent;
+     border-radius: 30px 0px 0px 30px;
+     border-right: 2px solid #60807F;
+     color: teal;
+     cursor: pointer;
+   
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.year{
+     width: 50%;
+     height: 50px;
+     text-transform: capitalize;
+     border-radius: 0px 30px 30px 0px;
+     color: darkcyan;
+     cursor: pointer;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.month:hover, .year:hover{
+     color: #f4f4f4;
+     background: #60807F;
+     transition:  all 0.2s ease;
+}
+
+.month:active, .year.year:active{
+     transform: scale(0.98);
+}
+
+.pricing-container{
+     width: 1200px;
+     min-height: 450px;
+     text-transform: capitalize;
+
+     display: flex;
+     transition: all 0.5s ease-in-out;
+     transition-delay: 0.5s;
+}
+
+.plans{
+     width: 40%;
+     height: 40px;
+}
+
+.features{
+     width: 60%;
+     height: 40px;
+}
+
+.pricing-container .header{
+     width: 100%;
+     height: 40px;
+     color: silver;
+     background: #262626;
+     border-radius: 7px 0 0 0;
+     opacity: 0.97;
+     
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.plans .price{
+     width: 100%;
+     height: 130px;
+     color: var(--text-color);
+     cursor: pointer;
+
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+
+     position: relative;
+}
+
+.plans .price h3{
+     font-size: 30px;
+     text-align: left;
+
+     margin: 10px 0;
+     padding: 0 30px;
+}
+
+.plans .price p{
+     padding: 0 30px;
+     letter-spacing: 2px;
+}
+
+.starterpack{
+     background: var(--primary-color);
+}
+
+.premiumpack{
+     background: var(--secondary-color);
+     border-radius: 8px 0 0 8px;
+     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+     transform: scale(1.1);
+     z-index: 1;
+
+     position: relative;
+}
+
+.premiumpack::before{
+     content: "\f058";
+     width: 30px;
+     height: 30px;
+     font-size: 16px;
+     font-family: "Font Awesome 5 Free";
+     color: #f4f4f4;
+     border-radius: 50%;
+
+     position: absolute;
+     top: 10px;
+     right: 10px;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.professionpack{
+     background: var(--third-color);
+}
+
+.unlimitedpack{
+     background: var(--fourth-color);
+}
+
+.starteroptions .optionstwo span{
+     color: tomato;
+}
+
+.premiumoptions .optionstwo span{
+     color: tomato;
+}
+
+.professionoptions .optionstwo span{
+     color: tomato;
+}
+
+.unlimitedoptions .optionstwo span{
+     color: rgb(59, 216, 59);
+}
+
+.price::after{
+     content: ' ';
+     width: 40px;
+     height: 40px;
+     background: black;
+
+     position: absolute;
+     top: 50%;
+     left: calc(100% - 30px);
+
+     transform: translateY(-50%) rotate(45deg);
+}
+
+.price:nth-child(2)::after{
+     background: var(--primary-color);
+}
+
+.price:nth-child(3)::after{
+     background: var(--secondary-color);
+}
+
+.price:nth-child(4)::after{
+     background: var(--third-color);
+}
+
+.price:nth-child(5)::after{
+     background: var(--fourth-color);
+}
+
+.options{
+     width: 70%;
+
+     float: left;
+}
+
+.payment{
+     width: 30%;
+     background: #e9e9e9;
+     float: left;
+}
+
+.optionslist{
+     width: 100%;
+     height: 130px;
+     background-color: #f4f4f4;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.optionslist:nth-child(2){
+     background: #ffff;
+     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+     transform: scale(1.1);
+     z-index: 1;
+}
+
+.optionsone{
+     margin: 0 20px;
+}
+
+.optionsone ul{
+     list-style: none;
+
+     margin: 0;
+     padding: 0;
+}
+
+.options ul li i{
+     font-size: 11px;
+     margin: 0px 10px;
+}
+
+.optionslist:nth-child(1) i{
+     color: var(--primary-color);
+}
+
+.optionslist:nth-child(2) i{
+     color: var(--secondary-color);
+}
+
+.optionslist:nth-child(3) i{
+     color: var(--third-color);
+}
+
+.optionslist:nth-child(4) i{
+     color: var(--fourth-color);
+}
+
+.starteroptions .optionstwo li , .starteroptions .optionstwo li i{
+     color: silver;
+}
+
+.premiumoptions .optionstwo li:nth-child(1), .premiumoptions .optionstwo li:nth-child(3), .premiumoptions .optionstwo li:nth-child(1) i, .premiumoptions .optionstwo li:nth-child(3) i{
+     color: silver;
+}
+
+.professionoptions .optionstwo li:nth-child(3), .professionoptions .optionstwo li:nth-child(3) i{
+     color: silver;
+}
+
+
+.options ul li{
+     /* border: 2px solid #fff; */
+     margin: 10px 0;
+}
+
+.optionstwo ul{
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+.paymentlist{
+     width: 100%;
+     height: 130px;
+     border-right: 4px solid salmon;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.paymentlist span{
+     font-size: 30px;
+}
+
+.paymentlist button{
+     width: 130px;
+     font-size: 16px;
+     text-transform: uppercase;
+     display: block;
+     border: 0;
+     border-radius:  4px;
+     cursor: pointer;
+
+     margin: 10px 0;
+     padding: 13px;
+}
+
+.paymentlist button:active{
+     transform: scale(0.98);
+}
+
+.paymentlist:nth-child(1){
+     border-right: 4px solid var(--primary-color);
+}
+
+.paymentlist:nth-child(3){
+     border-right: 4px solid var(--third-color);
+}
+
+.paymentlist:nth-child(4){
+     border-right: 4px solid var(--fourth-color);
+}
+
+.paymentlist:nth-child(1) button{
+     color: var(--text-color);
+     background-color: var(--primary-color);
+}
+
+.paymentlist:nth-child(2) button{
+     color: var(--text-color);
+     background-color: #262626;
+}
+
+.paymentlist:nth-child(3) button{
+     color: var(--text-color);
+     background-color: var(--third-color);
+}
+
+.paymentlist:nth-child(4) button{
+     color: var(--text-color);
+     background-color: var(--fourth-color);
+}
+
+.paymentlist:nth-child(2){
+     color: var(--text-color);
+     background: var(--secondary-color);
+     border-radius: 0 7px 7px 0;
+     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+     
+     transform: scale(1.1);
+     z-index: 1;
+     border-right: none;
+}
+
+
+
+
+/* Payment Container */
+/* .payment-container{
+     width: 550px;
+     height: 550px;
+     color: #f4f4f4;
+     background-color: rgb(89, 77, 170);
+     border-radius: 20px;
+
+     position: absolute;
+     top: 50%;
+     left: 150%;
+     transform: translate(-50%, -50%);
+
+     transition: all 0.6s ease-in-out;
+     transition-delay: 0.5s;
+}
+
+.payment-header{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     margin: 5px 0;
+}
+
+.payment-header h3{
+     font-size: 17px;
+     margin: 0px 20px;
+}
+
+.dropdown{
+     position: relative;
+}
+
+.dropdownbtn{
+     width: 200px;
+     height: 20px;
+     color: #e9e9e9;
+    text-align: right;
+     background-color: #99b455;
+     cursor: pointer;
+}
+
+.dropdownbtn i {
+     margin:  0 10px;
+}
+
+.drop-down{
+     width: 100%;
+     height: 100px;
+     background-color: #ff684a;
+     position: absolute;
+     top: 100%;
+     left: 0;
+}
+
+.drop-down ul{
+     list-style-type: none;
+     margin: 0;
+}
+
+.drop-down ul li{
+     background-color: aqua;
+     padding: 10px;
+}
+
+.payment-header #card:focus{
+     outline: 0;
+}
+
+.img-container{
+     width: 300px;
+     height: 100px;
+
+     margin: 20px auto;
+     margin-top: 50px;
+     position: relative;
+}
+
+.img-container .slide{
+     width: 100%;
+     height: 100%;
+     background-size: 50%;
+     background-position: center;
+     background-repeat: no-repeat;
+
+     position: absolute;
+     top: 0;
+     left: 0;
+     opacity: 0;
+}
+
+.arrow-container{
+     width: 100px;
+     margin: 10px auto;
+}
+
+.arrow-container i{
+     cursor: pointer;
+}
+
+.arrow-container i:active{
+     transform: scale(0.9);
+}
+
+.slide.active{
+     opacity: 1;
+}
+
+.paymentsection{
+     width: 400px;
+     height: 200px;
+
+     margin: 0 auto;
+}
+
+.paymentsection label{
+     text-transform: capitalize;
+     display: block;
+     margin: 10px 0;
+}
+
+.paymentsection input{
+     width: 100%;
+     height: 20px;
+
+     margin: 5px 0;
+     padding: 15px;
+}
+
+.paymentsection input::placeholder{
+     font-family: inherit;
+     font-size: 14px;
+     color: silver;
+}
+
+.paymentsection input:focus{
+     outline: 0;
+}
+
+.paymentfooter{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     margin: 10px 0;
+}
+
+.paymentfooter label{
+     margin: 0px 10px;
+}
+
+.paymentfooter label:nth-child(1){
+     margin-left: 0;
+}
+
+.paymentfooter input{
+     width: 50%;
+}
+
+.paymentfooter input:nth-child(2){
+     margin-right: 0;
+}
+
+.paymentbtn{
+     width: 100%;
+     font-family: inherit;
+     color: #e9e9e9;
+     background-color: #FFC15C;
+     text-transform: capitalize;
+     border: 0;
+     cursor: pointer;
+
+     margin: 20px 0;
+     padding: 7px;
+}
+
+.paymentbtn:focus{
+     outline: 0;
+}
+
+.paymentbtn:active{
+     transform: scale(0.98);
+} */

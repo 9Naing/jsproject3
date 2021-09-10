@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+     <title>payment</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./css/payment.css" type="text/css">
+<body>
+      <div class="payment-container">
+          <div class="img-container">
+               <div class="slide " style="background-image: url(./img/americanexpress.png);"></div>
+               <div class="slide active" style="background-image: url(./img/paypal.png);"></div>
+               <div class="slide" style="background-image: url(./img/visa.png);"></div>
+          </div>
+
+         <div class="arrow-container">
+          <i class="fas fa-angle-left arrowleft fa-2x" style="margin-right: 50px;"></i>
+          <i class="fas fa-angle-right fa-2x arrowright"></i>
+         </div>
+
+          <div class="paymentsection">
+               <label for="number">card number :</label>
+               <input type="text" class="number" id="number" placeholder="0124 - 5678 - 9909 - 4567" />
+
+               <label for="name">card holder :</label>
+               <input type="text" class="name" id="name"placeholder="Card holder's Name" />
+
+               <div class="paymentfooter">
+                    <label for="expire">expires:</label>
+                    <input type="text" class="date" name="date" placeholder="MM / YYYY" />
+
+                    <label for="cvc">cvc:</label>
+                    <input type="password" class="cvc" name="cvc" />
+               </div>
+
+               <button class="paymentbtn">checkout !</button>
+          </div>
+
+
+     </div>
+
+
+     <script src="./js/payment.js" type="text/javascript"></script>
+</body>
+</html>
