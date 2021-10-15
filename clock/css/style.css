@@ -56,7 +56,7 @@ body{
 .clock{
      width: 200px;
      height: 200px;
-     background-color: #f0f0f0;
+     /* background-color: #f0f0f0; */
 
      position: relative;
 }
@@ -74,18 +74,21 @@ body{
 }
 
 .neddle.hour{
-     transform: translate(-50%, -100%) rotate(0deg);
+     --rotation: 0;
+     transform: translate(-50%, -100%) rotate(calc(var(--rotation) * 1deg));
 }
 
 .neddle.minute{
+     --rotation: 0;
      height: 100px;
-     transform: translate(-50%, -100%) rotate(45deg);
+     transform: translate(-50%, -100%) rotate(calc(var(--rotation) * 1deg));
 }
 
 .neddle.second{
+     --rotation: 0;
      height: 100px;
      background-color: red;
-     transform: translate(-50%, -100%) rotate(90deg);
+     transform: translate(-50%, -100%) rotate(calc(var(--rotation) * 1deg));
 }
 
 .center-point{
@@ -113,4 +116,35 @@ body{
      left: 50%;
 
      transform: translate(-50%, -50%);
+}
+
+.time{
+     font-size: 60px;
+}
+
+.date{
+     color: #999;
+     font-size: 15px;
+     letter-spacing: 0.3px;
+     text-transform: uppercase;
+}
+
+.date .circle{
+     width: 18px;
+     height: 18px;
+     background-color: var(--primary-color);
+     color: var(--secondary-color);
+     border-radius: 50%;
+
+     /* Method 1 */
+     /* display: inline-flex;
+     justify-content: center;
+     align-content: center; */
+
+     /* Method 2 */
+     display: inline-block;
+     text-align: center;
+     line-height: 18px;
+
+     transition: all 0.5s;
 }

@@ -21,14 +21,14 @@ function dragstart(){
 
 // console.log(empties);
 
-empties.forEach(empty=>{
-    // console.log(empty);
+// empties.forEach(empty=>{
+//     // console.log(empty);
 
-    // empty.addEventListener('dragover',dragover);
-    // empty.addEventListener('dragenter',dragenter);
-    // empty.addEventListener('dragleave',dragleave);
-    // empty.addEventListener('drop',dragdrop);
-});
+//     // empty.addEventListener('dragover',dragover);
+//     // empty.addEventListener('dragenter',dragenter);
+//     // empty.addEventListener('dragleave',dragleave);
+//     // empty.addEventListener('drop',dragdrop);
+// });
 
 // =>ES6 can looping object5-specific iterator value
 for(const empty of empties){

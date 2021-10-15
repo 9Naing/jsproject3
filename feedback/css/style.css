@@ -16,10 +16,6 @@ body{
      overflow: hidden;
 }
 
-.rating img{
-     width: 40px;
-}
-
 .panel-container{
      width: 400px;
      background-color: #ffff;
@@ -36,6 +32,10 @@ body{
 .rating-container{
      display: flex;
      margin: 20px 0;
+}
+
+.rating img{
+     width: 40px;
 }
 
 .rating{
